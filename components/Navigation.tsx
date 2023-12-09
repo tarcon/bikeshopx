@@ -1,4 +1,4 @@
-import { FC, h} from "nano-jsx";
+import { FC } from "nano-jsx";
 import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx";
 
 export function Navigation() {

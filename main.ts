@@ -2,10 +2,9 @@ import { recursiveReaddir } from "recursiveReaddir";
 import { fromFileUrl } from "path";
 
 import * as Peko from "peko";
-import { Nano, renderSSR } from "nano-jsx";
+import { renderSSR } from "nano-jsx";
 
 import { App } from "./components/App.tsx";
-import { Welcome } from "./pages/Welcome.tsx";
 
 const router = new Peko.Router();
 

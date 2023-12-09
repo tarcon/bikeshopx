@@ -1,5 +1,3 @@
-import { FC, h } from "nano-jsx";
-
 export function Logo({
   color = "#FF5C00",
   className = "",

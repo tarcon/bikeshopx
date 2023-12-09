@@ -1,5 +1,3 @@
-import { FC, h } from "nano-jsx";
-
 export function BikeGraphic({
   rimColor = "#3A3A3A",
   spokeColor = "#C4C4C4",

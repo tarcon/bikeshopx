@@ -1,4 +1,3 @@
-import { FC, h } from "nano-jsx";
 import { BikeGraphic } from "./BikeGraphic.tsx";
 import { Logo } from "./Logo.tsx";
 

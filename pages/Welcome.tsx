@@ -1,5 +1,3 @@
-import { FC, h } from "nano-jsx";
-
 export const Welcome = () => (
   <div class="row">
     <div class="col-6-md">

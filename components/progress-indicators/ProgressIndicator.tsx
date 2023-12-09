@@ -1,5 +1,3 @@
-import { FC, h } from "nano-jsx";
-
 export function ProgressIndicator() {
   return (
     <div>

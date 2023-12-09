@@ -1,4 +1,3 @@
-import { FC, h } from "nano-jsx";
 import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx";
 
 export function BikeProductCard({

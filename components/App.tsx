@@ -1,6 +1,6 @@
-import { FC, h, Helmet, Fragment } from "nano-jsx";
-import { Header } from "../components/Header.tsx";
-import { Navigation } from "../components/Navigation.tsx";
+import { FC,  Helmet, Fragment } from "nano-jsx";
+import { Header } from "./Header.tsx";
+import { Navigation } from "./Navigation.tsx";
 
 export const App = (page: FC, aside: FC) => (
   <Fragment>
