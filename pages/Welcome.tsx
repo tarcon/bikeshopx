@@ -2,6 +2,7 @@ import { Shop } from "../components/Shop.tsx";
 
 export const Welcome = () => (
   <Shop
+    activePath={"/"}
     page={
       <div class="row">
         <div class="col-6-md">
