@@ -39,9 +39,7 @@ export function ShoppingCart({ viewModel }: { viewModel: CartViewModel }) {
 
 function RemoveBikeFromCartButton(props: { ean: number }) {
   return (
-    <button
-      className="button icon-only"
-    >
+    <button className="button icon-only">
       <RemoveFromCartSvgIcon color="steelblue" />
       {/* <InlineProgressIndicator />*/}
     </button>

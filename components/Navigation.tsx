@@ -4,12 +4,10 @@ import { InlineProgressIndicator } from "./progress-indicators/InlineProgressInd
 export function Navigation() {
   return (
     <ul style={{ marginTop: -30 }}>
-      <NavigationButton
-      >
+      <NavigationButton>
         Welcome
       </NavigationButton>
-      <NavigationButton
-      >
+      <NavigationButton>
         See Bikes
       </NavigationButton>
     </ul>
@@ -20,13 +18,12 @@ function NavigationButton(props: {
   active?: boolean;
   children: FC;
 }) {
-
   return (
     <button
       className={props.active ? "button primary" : "button"}
     >
       {props.children}
-        { /* <InlineProgressIndicator />*/}
+      {/* <InlineProgressIndicator />*/}
     </button>
   );
 }

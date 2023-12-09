@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "start": "deno run --allow-net --allow-read index.tsx",
+    "start": "deno run --allow-net --allow-read index.tsx"
   },
   "imports": {
     "nano-jsx": "https://deno.land/x/nano_jsx/mod.ts",
@@ -20,5 +20,8 @@
     "jsxImportSource": "nano",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment"
+  },
+  "fmt": {
+    "semiColons": true
   }
 }
