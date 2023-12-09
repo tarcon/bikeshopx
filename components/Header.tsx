@@ -1,8 +1,8 @@
-import { BikeGraphic } from "./BikeGraphic.tsx";
-import { Logo } from "./Logo.tsx";
+import { BikeGraphic } from "./BikeGraphic.tsx"
+import { Logo } from "./Logo.tsx"
 
-const HEIGHT = 200;
-const LOGO_HEIGHT = 35;
+const HEIGHT = 200
+const LOGO_HEIGHT = 35
 
 export function Header() {
   return (
@@ -24,5 +24,5 @@ export function Header() {
         }}
       />
     </nav>
-  );
+  )
 }

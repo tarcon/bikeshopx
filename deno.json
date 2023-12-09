@@ -22,6 +22,6 @@
     "jsxFragmentFactory": "Fragment"
   },
   "fmt": {
-    "semiColons": true
+    "semiColons": false
   }
 }

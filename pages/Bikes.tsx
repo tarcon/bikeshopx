@@ -1,15 +1,15 @@
-import { BikeProductCard } from "../components/BikeProductCard.tsx";
-import { Shop } from "../components/Shop.tsx";
+import { BikeProductCard } from "../components/BikeProductCard.tsx"
+import { Shop } from "../components/Shop.tsx"
 
-export type BikesViewModel = BikeViewModel[];
+export type BikesViewModel = BikeViewModel[]
 
 export type BikeViewModel = {
-  ean: number;
-  name: string;
-  price: string;
-  productImageFileName: string;
-  description: string;
-};
+  ean: number
+  name: string
+  price: string
+  productImageFileName: string
+  description: string
+}
 
 const bikes: BikesViewModel = [
   {
@@ -35,7 +35,7 @@ const bikes: BikesViewModel = [
     productImageFileName: "dungeon.jpg",
     description: "German engineered racing bike with nice looks.",
   },
-];
+]
 
 export function BikesPage() {
   return (
@@ -56,5 +56,5 @@ export function BikesPage() {
         </div>
       }
     />
-  );
+  )
 }

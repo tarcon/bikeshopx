@@ -1,5 +1,5 @@
-import { FC } from "nano-jsx";
-import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx";
+import { FC } from "nano-jsx"
+import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx"
 
 export function Navigation(props: { activePath: string }) {
   return (
@@ -11,13 +11,13 @@ export function Navigation(props: { activePath: string }) {
         See Bikes
       </NavigationButton>
     </ul>
-  );
+  )
 }
 
 function NavigationButton(props: {
-  path: string;
-  active?: boolean;
-  children: FC;
+  path: string
+  active?: boolean
+  children: FC
 }) {
   return (
     <a
@@ -27,5 +27,5 @@ function NavigationButton(props: {
       {props.children}
       {/* <InlineProgressIndicator />*/}
     </a>
-  );
+  )
 }

@@ -1,4 +1,4 @@
-import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx";
+import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx"
 
 export function BikeProductCard({
   description,
@@ -21,5 +21,5 @@ export function BikeProductCard({
         </button>
       </footer>
     </div>
-  );
+  )
 }

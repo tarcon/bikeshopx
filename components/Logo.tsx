@@ -3,9 +3,9 @@ export function Logo({
   className = "",
   style,
 }: {
-  color: string;
-  className?: string;
-  style?: object;
+  color: string
+  className?: string
+  style?: object
 }) {
   return (
     <svg
@@ -20,5 +20,5 @@ export function Logo({
         fill={color}
       />
     </svg>
-  );
+  )
 }

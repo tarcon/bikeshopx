@@ -6,5 +6,5 @@ export function InlineProgressIndicator() {
       <span>•</span>
       <span>•</span>
     </span>
-  );
+  )
 }

@@ -9,15 +9,15 @@ export function BikeGraphic({
   style,
   className = "",
 }: {
-  rimColor?: string;
-  spokeColor?: string;
-  seatPostColor?: string;
-  saddleColor?: string;
-  barColor?: string;
-  tireColor?: string;
-  frameColor?: string;
-  style?: object;
-  className?: string;
+  rimColor?: string
+  spokeColor?: string
+  seatPostColor?: string
+  saddleColor?: string
+  barColor?: string
+  tireColor?: string
+  frameColor?: string
+  style?: object
+  className?: string
 }) {
   return (
     <svg
@@ -96,5 +96,5 @@ export function BikeGraphic({
         fill={barColor}
       />
     </svg>
-  );
+  )
 }

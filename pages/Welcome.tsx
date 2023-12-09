@@ -1,4 +1,4 @@
-import { Shop } from "../components/Shop.tsx";
+import { Shop } from "../components/Shop.tsx"
 
 export const Welcome = () => (
   <Shop
@@ -23,4 +23,4 @@ export const Welcome = () => (
       </div>
     }
   />
-);
+)
