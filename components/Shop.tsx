@@ -1,8 +1,8 @@
-import { FC,  Helmet, Fragment } from "nano-jsx";
+import { FC, Fragment, Helmet } from "nano-jsx";
 import { Header } from "./Header.tsx";
 import { Navigation } from "./Navigation.tsx";
 
-export const App = (page: FC, aside: FC) => (
+export const Shop = (props: { page: FC; aside?: FC }) => (
   <Fragment>
     <Helmet>
       <title>Bikeshop X</title>
@@ -20,10 +20,10 @@ export const App = (page: FC, aside: FC) => (
       <div className="row">
         <div className="col-8">
           <section style={{ padding: "0 24px" }}>
-            {page}
+            {props.page}
           </section>
         </div>
-        {aside && (
+        {props.aside && (
           <div className="col-4">
             Aside
           </div>

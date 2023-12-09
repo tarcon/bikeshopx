@@ -4,7 +4,7 @@ import { fromFileUrl } from "path";
 import * as Peko from "peko";
 import { renderSSR } from "nano-jsx";
 
-import { App } from "./components/App.tsx";
+import { Welcome } from "./pages/Welcome.tsx";
 
 const router = new Peko.Router();
 
@@ -26,7 +26,7 @@ router.addRoutes(staticFiles.map((file): Peko.Route => {
 
 router.get(
   "/",
-  Peko.ssr(() => renderSSR(App)),
+  Peko.ssr(() => renderSSR(Welcome)),
 );
 
 Deno.serve((req) => router.handle(req));
