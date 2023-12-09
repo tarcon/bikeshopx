@@ -1,7 +1,6 @@
 {
   "tasks": {
     "start": "deno run --allow-net --allow-read index.tsx",
-    "island": "deno bundle ./islands/index.ts ./islands/bundle.js"
   },
   "imports": {
     "nano-jsx": "https://deno.land/x/nano_jsx/mod.ts",
@@ -21,7 +20,5 @@
     "jsxImportSource": "nano",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment"
-  },
-  "fmt": {
   }
 }

@@ -17,7 +17,7 @@ export function Navigation() {
 }
 
 function NavigationButton(props: {
-  active: boolean;
+  active?: boolean;
   children: FC;
 }) {
 

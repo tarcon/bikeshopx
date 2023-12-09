@@ -2,9 +2,9 @@ export function BikeGraphic({
   rimColor = "#3A3A3A",
   spokeColor = "#C4C4C4",
   seatPostColor = "#454545",
-  saddleColor = "black",
-  barColor = "black",
-  tireColor = "black",
+  saddleColor = "#000000",
+  barColor = "#000000",
+  tireColor = "#000000",
   frameColor = "#FF8A00",
   style,
   className = "",
@@ -25,7 +25,7 @@ export function BikeGraphic({
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={style}
-      className={className}
+      class={className}
     >
       <path
         d="M36.9998 240.455L143.959 287.196L49.9998 217.938L36.9998 240.455Z"
@@ -44,14 +44,14 @@ export function BikeGraphic({
         cy="286.5"
         r="131"
         stroke={rimColor}
-        strokeWidth="29"
+        stroke-width="29"
       />
       <circle
         cx="145.5"
         cy="286.5"
         r="141.5"
         stroke={tireColor}
-        strokeWidth="8"
+        stroke-width="8"
       />
       <path
         d="M477 238.455L583.959 285.196L490 215.938L477 238.455Z"
@@ -70,14 +70,14 @@ export function BikeGraphic({
         cy="286.5"
         r="131"
         stroke={rimColor}
-        strokeWidth="29"
+        stroke-width="29"
       />
       <circle
         cx="583.5"
         cy="286.5"
         r="141.5"
         stroke={tireColor}
-        strokeWidth="8"
+        stroke-width="8"
       />
       <path
         d="M246.5 101L281.5 101L239.5 14L188.5 14L239.5 32L213.5 32L246.5 101Z"
