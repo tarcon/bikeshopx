@@ -8,10 +8,6 @@ export const Shop = (props: { page: FC; activePath: string; aside?: FC }) => (
       <title>Bikeshop X</title>
       <link rel="stylesheet" href="public/css/chota.css" />
       <link rel="stylesheet" href="public/css/header.css" />
-      <link
-        rel="stylesheet"
-        href="public/css/inline-progress-indicator.css"
-      />
       <link rel="stylesheet" href="public/css/main.css" />
       <script src="public/js/htmx.min.js"></script>
     </Helmet>
@@ -24,11 +20,8 @@ export const Shop = (props: { page: FC; activePath: string; aside?: FC }) => (
             {props.page}
           </section>
         </div>
-        {props.aside && (
-          <div className="col-4">
-            Aside
-          </div>
-        )}
+        <aside className="col-4" id={"sidebar"}>
+        </aside>
       </div>
     </div>
   </Fragment>

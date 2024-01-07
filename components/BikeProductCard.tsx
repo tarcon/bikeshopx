@@ -1,4 +1,6 @@
-import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx"
+import { SavingIndicator } from "./progress-indicators/SavingIndicator.tsx"
+import { withStyles } from "nano-jsx"
+import { BikeViewModel } from "../pages/Bikes.tsx"
 
 export function BikeProductCard({
   description,
@@ -15,11 +17,30 @@ export function BikeProductCard({
       <p>{description}</p>
       <img src={`public/images/${productImageFileName}`} alt={name} />
       <footer>
-        <h1 className="text-gray-200 font-bold text-xl">{price}</h1>
-        <button className="px-3 py-1 bg-gray-200 text-sm text-gray-900 font-semibold rounded">
-          Add to cart {/* <InlineProgressIndicator />*/}
-        </button>
+        <h1>{price}</h1>
+        <AddToCartButton ean={ean} />
       </footer>
     </div>
+  )
+}
+
+function AddToCartButton(props: { ean: string }) {
+  // language=CSS
+  const CSS = `
+
+    button.htmx-request .savingIndicator {
+      display: inline-block;
+    }
+  `
+
+  return withStyles(CSS)(
+    <button
+      value={props.ean}
+      hx-vals='{"myVal": "My Value"}'
+      hx-post={"/cart"}
+      hx-target={"#sidebar"}
+    >
+      Add to cart <SavingIndicator />
+    </button>,
   )
 }

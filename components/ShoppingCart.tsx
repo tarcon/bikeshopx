@@ -1,6 +1,11 @@
-import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx"
+import { SavingIndicator } from "./progress-indicators/SavingIndicator.tsx"
 
-export function ShoppingCart({ viewModel }: { viewModel: CartViewModel }) {
+export function ShoppingCart(props) {
+  console.log(props)
+  const viewModel = {
+    bikes: [],
+  }
+
   const cartBikesTableRows = viewModel.bikes.map((bike) => (
     <tr key={bike.ean}>
       <td className="">{bike.name}</td>
@@ -11,7 +16,7 @@ export function ShoppingCart({ viewModel }: { viewModel: CartViewModel }) {
       </td>
     </tr>
   ))
-
+  console.log("return")
   return (
     <div className="card">
       <header>

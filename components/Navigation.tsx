@@ -1,5 +1,5 @@
 import { FC } from "nano-jsx"
-import { InlineProgressIndicator } from "./progress-indicators/InlineProgressIndicator.tsx"
+import { SavingIndicator } from "./progress-indicators/SavingIndicator.tsx"
 
 export function Navigation(props: { activePath: string }) {
   return (

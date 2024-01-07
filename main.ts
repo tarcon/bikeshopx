@@ -6,6 +6,7 @@ import { renderSSR } from "nano-jsx"
 
 import { Welcome } from "./pages/Welcome.tsx"
 import { BikesPage } from "./pages/Bikes.tsx"
+import { ShoppingCart } from "./components/ShoppingCart.tsx"
 
 const router = new Peko.Router()
 
@@ -33,6 +34,11 @@ router.get(
 router.get(
   "/bikes",
   Peko.ssr(() => renderSSR(BikesPage)),
+)
+
+router.post(
+  "/cart",
+  Peko.ssr((foo) => renderSSR(() => ShoppingCart(foo))),
 )
 
 Deno.serve((req) => router.handle(req))
