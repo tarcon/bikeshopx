@@ -15,10 +15,10 @@ export function BikeProductCard({
         <h4 className="text-uppercase">{name}</h4>
       </header>
       <p>{description}</p>
-      <img src={`public/images/${productImageFileName}`} alt={name} />
+      <img src={`/images/${productImageFileName}`} alt={name} />
       <footer>
         <h1>{price}</h1>
-        <AddToCartButton ean={ean} />
+        <AddToCartButton ean={ean.toString()} />
       </footer>
     </div>
   )
