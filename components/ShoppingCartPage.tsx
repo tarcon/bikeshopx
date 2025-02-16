@@ -1,6 +1,6 @@
 import { SavingIndicator } from "./progress-indicators/SavingIndicator.tsx"
 
-export function ShoppingCart(props) {
+export function ShoppingCartPage(props) {
   console.log(props)
   const viewModel = {
     bikes: [],

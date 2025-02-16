@@ -1,6 +1,6 @@
 import { Shop } from "../components/Shop.tsx"
 
-export const Welcome = () => (
+export const WelcomePage = () => (
   <Shop
     activePath={"/"}
     page={
@@ -15,7 +15,7 @@ export const Welcome = () => (
 
         <div class="col-3-md">
           <img
-            src="public/images/cleancode.jpg"
+            src="images/cleancode.jpg"
             width="100"
             alt="Powered by clean code"
           />

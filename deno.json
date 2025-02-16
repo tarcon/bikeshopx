@@ -1,13 +1,11 @@
 {
   "tasks": {
-    "start": "deno run --allow-net --allow-read index.tsx"
+    "start": "deno run --allow-net --allow-read main.ts"
   },
   "imports": {
+    "hono": "npm:hono@^4.7.1",
     "nano-jsx": "https://deno.land/x/nano_jsx/mod.ts",
-    "nano/jsx-runtime": "https://deno.land/x/nano_jsx/jsx-runtime/index.ts",
-    "peko": "https://deno.land/x/peko@2.1.0/mod.ts",
-    "recursiveReaddir": "https://deno.land/x/recursive_readdir/mod.ts",
-    "path": "https://deno.land/std/path/mod.ts"
+    "nano/jsx-runtime": "https://deno.land/x/nano_jsx/jsx-runtime/index.ts"
   },
   "compilerOptions": {
     "lib": [

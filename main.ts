@@ -1,44 +1,29 @@
-import { recursiveReaddir } from "recursiveReaddir"
-import { fromFileUrl } from "path"
+import { Hono } from "hono"
+import { serveStatic } from "hono/deno"
 
-import * as Peko from "peko"
 import { renderSSR } from "nano-jsx"
 
-import { Welcome } from "./pages/Welcome.tsx"
+import { WelcomePage } from "./pages/WelcomePage.tsx"
 import { BikesPage } from "./pages/Bikes.tsx"
-import { ShoppingCart } from "./components/ShoppingCart.tsx"
+import { ShoppingCartPage } from "./components/ShoppingCartPage.tsx"
 
-const router = new Peko.Router()
+const app = new Hono()
 
-router.use(Peko.logger(console.log))
-
-const staticFiles = await recursiveReaddir(
-  fromFileUrl(new URL("./public", import.meta.url)),
-)
-
-router.addRoutes(staticFiles.map((file): Peko.Route => {
-  const fileRoute = file.slice(Deno.cwd().length + 1).replaceAll(/\\/g, "/")
-  return {
-    path: `/${fileRoute}`,
-    handler: Peko.staticFiles(
-      new URL(`./${fileRoute}`, import.meta.url),
-    ),
-  }
-}))
-
-router.get(
+app.get(
   "/",
-  Peko.ssr(() => renderSSR(Welcome)),
+  (c) => c.html(renderSSR(WelcomePage)),
 )
 
-router.get(
+app.get(
   "/bikes",
-  Peko.ssr(() => renderSSR(BikesPage)),
+  (c) => c.html(renderSSR(BikesPage)),
 )
 
-router.post(
+app.post(
   "/cart",
-  Peko.ssr((foo) => renderSSR(() => ShoppingCart(foo))),
+  (c) => c.html(renderSSR(ShoppingCartPage({}))),
 )
 
-Deno.serve((req) => router.handle(req))
+app.use("*", serveStatic({ root: "./public" }))
+
+Deno.serve(app.fetch)

@@ -6,10 +6,10 @@ export const Shop = (props: { page: FC; activePath: string; aside?: FC }) => (
   <Fragment>
     <Helmet>
       <title>Bikeshop X</title>
-      <link rel="stylesheet" href="public/css/chota.css" />
-      <link rel="stylesheet" href="public/css/header.css" />
-      <link rel="stylesheet" href="public/css/main.css" />
-      <script src="public/js/htmx.min.js"></script>
+      <link rel="stylesheet" href="css/chota.css" />
+      <link rel="stylesheet" href="css/header.css" />
+      <link rel="stylesheet" href="css/main.css" />
+      <script src="js/htmx.min.js"></script>
     </Helmet>
     <Header />
     <div className="card">
