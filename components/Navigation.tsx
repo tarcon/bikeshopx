@@ -1,5 +1,4 @@
 import { FC } from "nano-jsx"
-import { SavingIndicator } from "./progress-indicators/SavingIndicator.tsx"
 
 export function Navigation(props: { activePath: string }) {
   return (
@@ -17,7 +16,7 @@ export function Navigation(props: { activePath: string }) {
 function NavigationButton(props: {
   path: string
   active?: boolean
-  children: FC
+  children: FC | string
 }) {
   return (
     <a

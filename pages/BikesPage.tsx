@@ -1,5 +1,5 @@
 import { BikeProductCard } from "../components/BikeProductCard.tsx"
-import { Shop } from "../components/Shop.tsx"
+import { Page } from "../components/Page.tsx"
 
 export type BikesViewModel = BikeViewModel[]
 
@@ -11,7 +11,8 @@ export type BikeViewModel = {
   description: string
 }
 
-const bikes: BikesViewModel = [
+// todo tarcon - use gateway to fetch the data
+const bikesPage: BikesViewModel = [
   {
     ean: 123908123,
     name: "Carbono R3",
@@ -39,13 +40,12 @@ const bikes: BikesViewModel = [
 
 export function BikesPage() {
   return (
-    <Shop
+    <Page
       activePath={"/bikes"}
       page={
         <div className="row">
-          {bikes.map((bike: BikeViewModel) => (
+          {bikesPage.map((bike: BikeViewModel) => (
             <BikeProductCard
-              key={bike.ean}
               ean={bike.ean}
               name={bike.name}
               price={bike.price}

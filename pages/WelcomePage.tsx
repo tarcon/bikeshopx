@@ -1,7 +1,7 @@
-import { Shop } from "../components/Shop.tsx"
+import { Page } from "../components/Page.tsx"
 
 export const WelcomePage = () => (
-  <Shop
+  <Page
     activePath={"/"}
     page={
       <div class="row">

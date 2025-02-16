@@ -1,6 +1,6 @@
 import { SavingIndicator } from "./progress-indicators/SavingIndicator.tsx"
 import { withStyles } from "nano-jsx"
-import { BikeViewModel } from "../pages/Bikes.tsx"
+import { BikeViewModel } from "../pages/BikesPage.tsx"
 
 export function BikeProductCard({
   description,
@@ -10,7 +10,7 @@ export function BikeProductCard({
   productImageFileName,
 }: BikeViewModel) {
   return (
-    <div className="col-4 card">
+    <div className="col-4 card" key={ean}>
       <header>
         <h4 className="text-uppercase">{name}</h4>
       </header>
@@ -36,7 +36,7 @@ function AddToCartButton(props: { ean: string }) {
   return withStyles(CSS)(
     <button
       value={props.ean}
-      hx-vals='{"myVal": "My Value"}'
+      hx-vals={`{"ean": "${props.ean}"}`}
       hx-post={"/cart"}
       hx-target={"#sidebar"}
     >

@@ -1,11 +1,6 @@
-import { SavingIndicator } from "./progress-indicators/SavingIndicator.tsx"
+import { CartViewModel } from "../shop/ViewModels.ts"
 
-export function ShoppingCartPage(props) {
-  console.log(props)
-  const viewModel = {
-    bikes: [],
-  }
-
+export function Cart(viewModel: CartViewModel) {
   const cartBikesTableRows = viewModel.bikes.map((bike) => (
     <tr key={bike.ean}>
       <td className="">{bike.name}</td>
@@ -16,7 +11,7 @@ export function ShoppingCartPage(props) {
       </td>
     </tr>
   ))
-  console.log("return")
+
   return (
     <div className="card">
       <header>

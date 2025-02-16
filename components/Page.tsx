@@ -2,7 +2,7 @@ import { FC, Fragment, Helmet } from "nano-jsx"
 import { Header } from "./Header.tsx"
 import { Navigation } from "./Navigation.tsx"
 
-export const Shop = (props: { page: FC; activePath: string; aside?: FC }) => (
+export const Page = (props: { page: FC; activePath: string; aside?: FC }) => (
   <Fragment>
     <Helmet>
       <title>Bikeshop X</title>
